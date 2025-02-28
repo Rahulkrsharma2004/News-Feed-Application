@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   news: [],
-  categories: ["Tech", "Business", "Sports"],
+  categories: ["Tech", "Business", "Sports" , "Health", "Entertainment"],
   selectedCategories: ["Tech"],
 };
 
