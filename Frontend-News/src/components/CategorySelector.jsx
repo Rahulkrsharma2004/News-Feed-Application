@@ -15,20 +15,24 @@ const CategorySelector = () => {
   };
 
   return (
-    <div className="flex justify-center gap-4 mb-4">
-      {categories.map((category) => (
-        <button
-          key={category}
-          className={`px-4 py-2 rounded ${
-            selectedCategories.includes(category)
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200"
-          }`}
-          onClick={() => handleCategoryChange(category)}
-        >
-          {category}
-        </button>
-      ))}
+    <div className="w-full overflow-x-auto px-4 py-2">
+      <div className="flex flex-wrap md:flex-nowrap gap-3 justify-center items-center">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded transition-all duration-300
+              ${
+                selectedCategories.includes(category)
+                  ? "bg-blue-500 text-white shadow-lg"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }
+            `}
+            onClick={() => handleCategoryChange(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
