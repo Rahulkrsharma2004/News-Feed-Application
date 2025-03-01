@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import NewsList from "./components/NewsList";
 import CategorySelector from "./components/CategorySelector";
 
-const socket = io("http://localhost:5000");
+const socket = io("http://backend-service:5000");
 
 const App = () => {
   const dispatch = useDispatch();
